@@ -120,6 +120,9 @@ ENV/
 # Mongo Explorer plugin:
 .idea/mongoSettings.xml
 
+#all
+.idea/
+
 ## File-based project format:
 *.iws
 
