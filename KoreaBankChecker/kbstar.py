@@ -1,4 +1,4 @@
-mport requests
+import requests
 from bs4 import BeautifulSoup as bs
 from datetime import date, timedelta
 from os import environ
