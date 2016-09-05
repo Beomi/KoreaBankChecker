@@ -1,12 +1,20 @@
 # KoreaBankChecker
 
 ## kbstar (국민은행)
-### 구현기능
-1. KB은행 간편조회에 등록된 계좌에 한해 사용가능
-2. 사용자가 일정의 재설정 가능
-3. python3에 구현 맞춰져 있음
-4. 환경변수로 접근해서 사용하게 됨
-  /etc/bash.bashrc 파일에
+### 현재 구현된 기능
+1. 은행 계좌의 잔액 확인
+2. Transaction Class
+
+
+### 사용방법
+1. KB은행 간편조회에 사용하는 계좌를 등록
+2. Python3 설치
+3. pip로 필요 패키지 & 의존성 모듈 설치
+```
+pip install -r requirements.txt
+```
+4. 환경변수 세팅
+  ~/.bashrc 파일에
 ```
 #ENV for BANK PY
 export RESIDENTNUMBER=주민번호 뒤7자리
@@ -14,10 +22,10 @@ export BANKID=국민은행ID
 export BANKPW=계좌비밀번호4자리
 export ACCOUNTNUMBER=계좌번호
 ```
-  이같은 형식으로 입력후 사용 가능
-  bash를 재실행 하지 않고 적용하기 위해서라면
+  이같은 형식으로 저장하면 새 쉘 실행시 바로적용된다.
+  쉘을 재실행 하지 않고 바로 적용하기 위해서는
 ```
-source /etc/bash.bashrc
+source ~/.bashrc
 ```
   명령어로 사용 가능.
 
