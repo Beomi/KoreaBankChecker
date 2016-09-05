@@ -67,3 +67,9 @@ class Transaction(object):
             })
         return result_dics
 
+    def check_paid(self, name, amount):
+        transactions =  self.get_transact_dic
+        for tr in transactions:
+            if (tr['by']==name) and (tr['amount']==amount):
+                return True
+        return False
