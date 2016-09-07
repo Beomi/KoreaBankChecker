@@ -53,9 +53,9 @@ class Transaction(object):
             transact_time = info[0].strip()[10:]
             transact_by = info[2].strip()
             if info[4] != '0':
-                transact_amount = "-" + info[4].strip()
+                transact_amount = int('-'+info[4].strip().replace(',',''))
             else:
-                transact_amount = "+" + info[5].strip()
+                transact_amount = int(info[5].strip().replace(',',''))
             print("거래일시: {}\n거래시각: {}\n​거래처: {}\n거래금액: {}".format(
                 transact_date, transact_time, transact_by, transact_amount
             ))
@@ -70,6 +70,6 @@ class Transaction(object):
     def check_paid(self, name, amount):
         transactions =  self.get_transact_dic
         for tr in transactions:
-            if (tr['by']==name) and (tr['amount']==amount):
+            if (tr['by']==name) and (tr['amount']==int(amount)):
                 return True
         return False
